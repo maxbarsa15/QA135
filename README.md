@@ -1,2 +1,2 @@
-"Виконан? роботи на курс? Manual QA (Баг репорти та тест кейси" 
+"╨г╤Б╤Ц ╨▓╨╕╨║╨╛╨╜╨░╨╜╤Ц ╨╖╨░╨▓╨┤╨░╨╜╨╜╤П ╨║╤Г╤А╤Б╤Г Manual QA (╤В╨╡╤Б╤В ╨║╨╡╨╣╤Б╨╕ ╤В╨░ ╨▒╨░╨│ ╤А╨╡╨┐╨╛╤А╤В╨╕) 
 "(https://docs.google.com/spreadsheets/d/1LIe-rDBSarmBsL25ldF1Tkn5Vx6aMmb1bCndNjtKHpg/edit?usp=sharing)" 
