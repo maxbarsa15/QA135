@@ -1,0 +1,155 @@
+{
+  "id": "8f97e913-c91c-45e6-a421-46db36fa870b",
+  "version": "2.0",
+  "name": "Wikipedia",
+  "url": "https://www.wikipedia.org",
+  "tests": [{
+    "id": "94be037c-128f-474d-8118-d251e30f1033",
+    "name": "Search for the article “Ukraine” and check the title",
+    "commands": [{
+      "id": "5d3b600c-ee21-400f-a931-919b5afff83e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.wikipedia.org\t",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f99feb88-94fc-45e6-bf6b-0082ce4234cc",
+      "comment": "",
+      "command": "type",
+      "target": "css=#searchInput\t",
+      "targets": [],
+      "value": "Ukraine"
+    }, {
+      "id": "c6dd9a66-e8ca-472c-9915-a311ee6126e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.pure-button\t",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cf51d16-2786-4328-991f-cb5844bd941b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//h1[@id='firstHeading']",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "4b305f96-51d0-4467-aa6c-ad7bda2d5a38",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//h1[@id='firstHeading']",
+      "targets": [],
+      "value": "headingText"
+    }, {
+      "id": "2cd3f579-d16e-4cd8-a791-03e2cf8d1ed9",
+      "comment": "",
+      "command": "echo",
+      "target": "${headingText}\t",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f174c2f-3bc9-4e18-a721-a41e98b539ba",
+      "comment": "",
+      "command": "assertText",
+      "target": "${headingText}",
+      "targets": [],
+      "value": "Україна"
+    }]
+  }, {
+    "id": "ffab1cd4-3222-477b-96c3-4daccad75dba",
+    "name": "Checking the “History” section in the article Ukraine",
+    "commands": [{
+      "id": "3d5871d1-dde9-48f3-9586-7fc345963350",
+      "comment": "",
+      "command": "open",
+      "target": "https://en.wikipedia.org/wiki/Ukraine\t",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbc4b941-5d64-456c-81da-c3c67f8e3188",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=h2#History\t",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "6e5fd765-bd49-4da6-913d-dd31522cf8e1",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//h2[@id='History']\t",
+      "targets": [],
+      "value": "historyTitle"
+    }, {
+      "id": "465da983-7134-483a-a774-7b5b31aa3d56",
+      "comment": "",
+      "command": "echo",
+      "target": "${historyTitle}\t",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d675654-51e5-498b-83ab-c21051a47093",
+      "comment": "",
+      "command": "assertText",
+      "target": "${historyTitle}\t",
+      "targets": [],
+      "value": "History"
+    }, {
+      "id": "6a7d219b-c81a-457b-9116-9e32c109ea74",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//h2[@id='History']\t",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b4d87a64-1d63-4a11-8f24-26259775460b",
+    "name": "Check the bottom of the page",
+    "commands": [{
+      "id": "fd18d6e0-5762-4ae8-b94d-08391e871d70",
+      "comment": "",
+      "command": "open",
+      "target": "https://en.wikipedia.org/wiki/Main_Page\t",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed33fe1f-a4fa-4818-8ab4-baf1ec3ac9f9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#footer\t",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "4f9c4805-9cd1-42ea-befe-490e8216639c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=li#footer-places-privacy a\t",
+      "targets": [],
+      "value": "privacyText"
+    }, {
+      "id": "d8ba97fc-1834-4b42-99b0-52f2bd9e9435",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=li#footer-places-privacy a\t",
+      "targets": [],
+      "value": "Privacy policy\t"
+    }, {
+      "id": "074ebfb6-3586-49c5-9065-73eb423fd71a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//li[@id='footer-places-privacy']/a\t",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0568e0fe-c0f8-480d-b9d3-a361e6217d90",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.wikipedia.org/"],
+  "plugins": []
+}
